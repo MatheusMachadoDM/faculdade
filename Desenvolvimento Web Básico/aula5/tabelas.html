@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seriviços e preços</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <style>
+        main> h1{
+            text-align: left;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            background-color: lightgray;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 2px 10px 2px 10px;
+        }
+        .num{
+            text-align: right;
+        }
+        .cor{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="imagens/logo.webp" alt="">
+        <img id="redes" src="imagens/redes sociais.jpg" alt="">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemSomos.html">Quem somos</a></li>
+            <li><a href="tabelas.html">Seriviços e preços</a></li>
+            <li><a href="contato.html">Cotato</a></li>
+        </ul>
+    </nav>
+    <main>
+    <h1>Tabela Semântica</h1>
+      <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana Silva</td>
+                    <td class="num">22</td>
+                    <td>Engenharia</td>
+                </tr>
+                <tr>
+                    <td>Bruno Santos</td>
+                    <td class="num">24</td>
+                    <td>Arquitetura</td>
+                </tr>
+                <tr>
+                    <td>Carlos Oliveira</td>
+                    <td class="num">21</td>
+                    <td>Design</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="cor">a</td>
+                    <td class="cor">a</td>
+                    <td class="cor">a</td>
+                </tr>
+                <tr>
+                    <th>Quantidade de alunos: </th>
+                    <td class="num">3</td>
+                    <td class="cor"> a</td>
+                </tr>
+
+            </tfoot>
+      </table>
+    </main>
+    <footer>
+        <p>Site criado por Matheus Machado para estudo pessoal.</p>
+    </footer>
+</body>
+</html>

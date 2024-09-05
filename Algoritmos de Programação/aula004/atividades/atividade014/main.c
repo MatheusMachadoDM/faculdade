@@ -16,7 +16,7 @@ morangos e a quantidade (em kg) de maças adquiridas e escreva o valor a ser pago
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
 	
-	float morango, maca;
+	float morango, maca, valorTotal;
 	
 	printf("Quantos KG de morango você comprou? ");
 	scanf("%f", &morango);
@@ -24,30 +24,13 @@ int main(int argc, char *argv[]) {
 	printf("Quantas KG de maça você comprou? ");
 	scanf("%f", &maca);
 	
-	if(morango + maca <= 10){
-		if(morango > 0 && morango <= 5){
-			printf("O preço do morango deu R$ %.2f", morango * 6.5);
-		}else{
-			printf("O preço do morango deu R$ %.2f", morango * 6.2);
-		}
-		
-		if(maca > 0 && maca <= 5){
-			printf(" e o preço da maça deu R$ %.2f", maca * 3.8);
-		}else{
-			printf(" e o preço da maça deu R$ %.2f", maca * 3.5);
-		}
+	valorTotal = morango * 6.5 + maca * 6.2;
+	
+	if(valorTotal > 50 || morango + maca > 10){
+		printf("O preço total será de R$%.2f ", valorTotal * 0.9);
+		printf("\nValor sem desconto seria de R$%.2f ", valorTotal);
 	}else{
-		if(morango > 0 && morango <= 5){
-			printf("O preço do morango deu R$ %.2f", morango * 6.5 - morango * 0.1);
-		}else{
-			printf("O preço do morango deu R$ %.2f", morango * 6.2 - morango * 0.1);
-		}
-		
-		if(maca > 0 && maca <= 5){
-			printf(" e o preço da maça deu R$ %.2f", maca * 3.8 -  maca * 0.1);
-		}else{
-			printf(" e o preço da maça deu R$ %.2f", maca * 3.5 - maca * 0.1);
-		}
+		printf("O preço total será de R$%.2f ", valorTotal);
 	}
 	
 	

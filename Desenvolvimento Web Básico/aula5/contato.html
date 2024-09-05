@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <style>
+        fieldset{
+            margin: 10px 0px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        legend{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="imagens/logo.webp" alt="">
+        <img id="redes" src="imagens/redes sociais.jpg" alt="">
+    </header>
+    <style>
+        main > h1{
+            text-align: left;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemSomos.html">Quem somos</a></li>
+            <li><a href="tabelas.html">Seriviços e preços</a></li>
+            <li><a href="contato.html">Cotato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Formulário</h1>
+        <form action="">
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" maxlength="40" placeholder="Nome completo" required>
+                </p>
+                <p>
+                    <label for="iemail">E-mail:</label>
+                    <input type="email" name="email" id="iemail" required maxlength="50">
+                </p>
+                <p>
+                    <label for="itelefone">Telefone:</label>
+                    <input type="tel" name="Telefone" id="itelefone" required maxlength="11">
+                </p>
+                <p>
+                    <label for="isenha">Senha:</label>
+                    <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20">
+                </p>
+                <p>
+                    <label for="isenha">Confirme a Senha:</label>
+                    <input type="password" name="confirmarSenha" id="iconfirmarSenha" required minlength="8" maxlength="20">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Detalhes Adicionais</legend>
+                <p>
+                    <label for="iNascimento"></label>
+                    <input type="date" name="nascimento" id="iNascimento" required>
+                </p>
+                <p>
+                    <label for="iTempo">Horário Preferido:</label>
+                    <input type="time" name="tempo" id="iTempo">
+                </p>
+                <p>
+                    <label for="iQuantidade">Quantidade: </label>
+                    <input type="number" name="quantidade" id="iQuantidade" max="999">
+                </p>
+                <p>
+                    <label for="iSite">Site Favorito:</label>
+                    <input type="text" name="site" id="iSite" maxlength="200">
+                </p>
+                <p>
+                    <label for="iSatisfacao">Nivel de Satisfação (1 a 10): </label>
+                    <input type="range" name="satisfacao" id="iSatisfacao" min="1" max="10" value="5">
+                </p>
+                <p>
+                    <label for="iCor">Cor Favorita:</label>
+                    <input type="color" name="cor" id="Icor">
+                </p>
+                <p>
+                    <label for="iMensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="iMensagem" cols="30" rows="10"></textarea>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Preferência: </legend>
+                
+                <p>
+                    <input type="radio" name="emailRadio" id="iEmailradio">
+                    <label for="iEmailradio">E-Mail</label>
+                    <input type="radio" name="telefoneRadio" id="iTelefoneradio">
+                    <label for="iTelefoneradio">Telefone</label>
+                    <input type="checkbox" name="sms" id="iSms">
+                    <label for="iSms">Receber SMS</label>
+                    <input type="checkbox" name="checkEmail" id="iCheckEmail">
+                    <label for="iSms">Receber E-mail</label>
+                </p>
+                <p>
+                    <label for="iCurso">Curso:</label>
+                    <select name="estado" id="iestado">
+                        <option value="" selected>--- Escolha ---</option>
+                        <option value="engenharia">Engenharia</option>
+                        <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="ADM">Administração</option>
+                    </select>
+                </p>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+    <footer>
+        <p>Site criado por Matheus Machado para estudo pessoal.</p>
+    </footer>
+</body>
+</html>
