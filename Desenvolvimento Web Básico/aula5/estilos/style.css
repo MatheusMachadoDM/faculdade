@@ -4,8 +4,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
+    background-image: linear-gradient(to bottom, red, blue);
+    background-attachment: fixed;
+}
+header, nav, main, footer{
     max-width: 1200px;
     margin: auto;
+    background-color: white;
+    padding: 5px;
 }
 header{
     display: flex;

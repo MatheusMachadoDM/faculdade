@@ -6,14 +6,41 @@
     <title>Início</title>
     <link rel="stylesheet" href="estilos/style.css">
     <style>
-        fieldset{
+        .campo{
             margin: 10px 0px;
             padding: 10px;
             display: flex;
             flex-direction: column;
+            
         }
         legend{
             font-weight: bold;
+        }
+        .campo input, textarea, select {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        }
+        #campo2{
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        #campo2 input, label, select{
+            margin: 10px 0;
+        }
+        #botaoDireita{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 4px
+        }
+        .botao{
+            color: white;
+            background-color: rgb(30, 134, 30);
+            border: 0;
+            border-radius: 4px;
+            width: 60px;
+            height: 40px;
+            margin: 10px 0px;
         }
 
     </style>
@@ -39,7 +66,7 @@
     <main>
         <h1>Formulário</h1>
         <form action="">
-            <fieldset>
+            <fieldset class="campo">
                 <legend>Informações pessoais</legend>
                 <p>
                     <label for="inome">Nome:</label>
@@ -62,7 +89,7 @@
                     <input type="password" name="confirmarSenha" id="iconfirmarSenha" required minlength="8" maxlength="20">
                 </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="campo">
                 <legend>Detalhes Adicionais</legend>
                 <p>
                     <label for="iNascimento"></label>
@@ -93,19 +120,18 @@
                     <textarea name="mensagem" id="iMensagem" cols="30" rows="10"></textarea>
                 </p>
             </fieldset>
-            <fieldset>
+            <fieldset id="campo2">
                 <legend>Preferência: </legend>
                 
-                <p>
-                    <input type="radio" name="emailRadio" id="iEmailradio">
+                    <input type="radio" name="notificacao" id="iEmailradio">
                     <label for="iEmailradio">E-Mail</label>
-                    <input type="radio" name="telefoneRadio" id="iTelefoneradio">
+                    <input type="radio" name="notificacao" id="iTelefoneradio">
                     <label for="iTelefoneradio">Telefone</label>
                     <input type="checkbox" name="sms" id="iSms">
                     <label for="iSms">Receber SMS</label>
                     <input type="checkbox" name="checkEmail" id="iCheckEmail">
-                    <label for="iSms">Receber E-mail</label>
-                </p>
+                    <label for="iCheckEmail">Receber E-mail</label>
+
                 <p>
                     <label for="iCurso">Curso:</label>
                     <select name="estado" id="iestado">
@@ -116,12 +142,14 @@
                     </select>
                 </p>
             </fieldset>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <p id="botaoDireita">
+                <input type="submit" value="Enviar" class="botao">
+                <input type="reset" value="Limpar" class="botao">
+            </p>
         </form>
     </main>
     <footer>
-        <p>Site criado por Matheus Machado para estudo pessoal.</p>
+        <p>Site criado por <strong>Matheus Machado</strong> para estudo pessoal.</p>
     </footer>
 </body>
 </html>
