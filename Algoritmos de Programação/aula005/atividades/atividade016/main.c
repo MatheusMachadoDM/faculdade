@@ -8,16 +8,16 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL,"portuguese");
 	
-	int contador, n1, resultado = 0;
+	int contador, resultado = 0, n1;
 	
 	for(contador = 1; resultado <= 100; contador++){
 		
 		resultado = resultado + contador;
-		
-		printf("resultado = %d\n", resultado);
-		printf("Contador = %d\n\n", contador);
 
 	}
+	
+	printf("Somando %d números em sequência chegamos ao resultado %d. Ou seja são necessários somar %d números em sequência para o resultado ultrapassar 100!", contador - 1, resultado, contador -1);
+	
 	
 	return 0;
 }
