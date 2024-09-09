@@ -13,19 +13,29 @@ int main(int argc, char *argv[]) {
 	setlocale(LC_ALL,"portuguese");
 	
 	int contador;
-	float n1, n2 = 0, n3, n4, calculo;
+	float n1 = 1, menor, maior, calculo;
 	
 	printf("Digite um número real para calcularmos o valor da amplitude estatística dos valores: (Quando quiser para a conta digite '0') ");
 	scanf("%f", &n1);
 	
+	menor = n1;
+	maior = n1;
 	
 	while(n1 != 0){
 		printf("Digite outro número real para adionarmos ao cálculo: ");
 		scanf("%f", &n1);
 		
-		if()
-		
+		if(n1 == 0){
+			printf("Fim da aplicação!");
+		}else if(n1 > maior){
+			maior = n1;
+		}else if(n1 < menor){
+			menor = n1;	
+		}
+			
 	}
+	calculo = maior - menor;
 	
+	printf("Resultado: %.1f", calculo);
 	return 0;
 }
