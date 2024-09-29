@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    background-color:#ffffff;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+main{
+    width: 100%;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: #0000009c;
+}
+li{
+    list-style: none;
+}
+section, footer{
+    padding: 54px 0;
+}
+header{
+    background-position: center; 
+    background-size: cover; 
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding-top: 30px; 
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #ffffff; 
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px; 
+    display: block;
+}
+nav ul a::after{ 
+    background-color: #93911a;
+    height: 5px;
+    width: 0%;
+    display: block;
+}
+nav ul a:hover:not(.btn)::after{ 
+    width: 100%;
+    transition: 0.2s;
+    margin: 0 auto;
+}
+.btn{
+    background-color: #4f9cf9;
+    margin: 10px;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor:pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+.btn:hover {
+    background-color: #3580db;
+}
+.btn.animate-btn{/* Aqui temos a classe .animate-btn como dependente do seletor de precedênca .btn, é preciso tomar cuidado, um único espaço aqui entre os caracteres invalida a animação*/
+    
+    animation: animate_outline 1s ease-out infinite;
+    }
+    @keyframes animate_outline {
+    from{
+    outline: 0px solid #4f9bf98a;
+    }
+    to{
+    outline: 15px solid #4f9bf900;
+    }
+    }
