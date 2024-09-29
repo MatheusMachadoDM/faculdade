@@ -1,0 +1,219 @@
+/*reset css*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+/*configuração geral de body*/
+body{
+    background-color:#ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    border: solid 3px black;
+    width: 100%;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: #0000009c;
+}
+
+li{
+    list-style: none; /*retira das listas os numeros ou bullet-points*/
+}
+
+section, footer{
+    padding: 54px 0;
+}
+
+/*header*/
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*nav (dentro de header)*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #ffffff;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a::after{
+    background-color: #93911a;
+    height: 5px;
+    width: 0%;
+    display: block;
+}
+
+nav ul a:hover:not(.botao)::after{
+    width: 100%;
+    transition: 0.2s;
+    margin: 0 auto;
+}
+
+/*Estilização de botão - ainda em header*/
+
+.botao{
+    background-color: #4f9cf9;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.botao:hover {
+    background-color: #3580db;
+}
+
+/*botao animado*/
+.botao-animado{
+    animation: animate_outline 1s ease-out infinite;
+}
+
+@keyframes animate_outline {
+    from{
+        outline: 0px solid #4f9bf98a;
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+/*Estilização da classe banner-principal - ainda em header*/
+.banner-principal{
+    display: flex;
+    justify-content: center;
+}
+.banner-texto{
+    margin:50px;
+    text-align: center;
+    padding: 0 90px;
+}
+.banner-principal .banner-texto h1{
+    font-size: 60px;
+    color: #ffffff;
+}
+.banner-principal .banner-texto p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+/*pratique-mais*/
+.pratique-mais .caixa-pai{
+    display: flex;
+    align-items: center;
+}
+.pratique-mais .pratique-mais-texto{
+    width: 50%;
+    padding: 0 40px;
+}
+.pratique-mais .pratique-mais-imagem{
+    width: 50%;
+}
+.pratique-mais-texto p{
+    margin: 20px 0;
+}
+.pratique-mais .pratique-mais-imagem img{
+    width: 100%;
+}
+
+/*relatos*/
+.relatos h3{
+    text-align: center;
+}
+.relatos p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cards-pessoas{
+    display: flex;
+    justify-content: center;
+}
+.relatos .itens-card{
+    background-color: #8abff1;
+    margin: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+}
+
+.relatos .itens-card img{
+    border-radius: 100%;
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+.relatos .itens-card .user-nome{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.relatos .itens-card .relato-user{
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.relatos .itens-card:hover{
+    background-color: aqua;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+.relatos .itens-card:hover .user-nome, 
+.relatos .itens-card:hover .relato-user{
+    color: #ffffff;
+}
+
+/*futuros-clientes*/
+.futuros-clientes h3,
+.futuros-clientes p{
+    text-align: center;
+}
+.futuros-clientes .caixa-pai div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*fim*/
+.fim{
+    background-color: #4f9cf9;
+    text-align: center;
+}
+.fim i{
+    color: #2418cb;
+    background-color: #ffffff;
+    font-size: 30px;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.fim p{
+    margin-top: 10px;
+    color: #ffffff;
+}

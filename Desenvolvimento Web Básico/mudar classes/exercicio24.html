@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex com classes alteradas</title>
+    <!--link para font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--final do link para font awesome-->
+    <link rel="stylesheet" href="css/classesAlteradas.css" type="text/css">
+    <style>
+    .caixa-pai {/*essa classe está aqui apenas por força do exercicio, mas o ideal é que estivesse no css externo, já que será repetida algumas vezes*/
+    max-width: 1400px; /*tamanho máximo de largura*/
+    margin:0 auto; 
+    padding: 0 5%;
+    }
+    </style>
+</head>
+<body>
+<main>
+    <!-- início da cabeçalho da página-->
+    <header style="background-image: url('img/background-home.jpg');"> <!--o uso de css inline aqui se justifica apenas para inserir uma imagem de fundo em header-->
+        <!-- incio da caixa-pai-->
+         <div class="caixa-pai">
+            <nav>
+                <a href="#"><!-- a url nesse caso seria 'index.html' ou seja, a página inicial-->
+                    <img src="img/logo.png" alt="descrição da imagem">
+                </a>
+                <ul class="ul">
+                    <li><a href="#" class="botao">HOME</a></li>
+                    <li><a href="#" class="botao">QUEM SOMOS</a></li>
+                    <li><a href="#" class="botao">NOSSOS SERVIÇOS</a></li>
+                    <li><a href="#" class="botao">CONTATO</a></li>
+                </ul>
+            </nav>
+         </div>
+        <!--final da caixa-pai-->
+         <section class="banner-principal">
+            <div class="banner-texto">
+                <h1> Exercício HTML e CSS</h1>
+                <p>Se não praticar em casa não aprende! </p>
+                <a href="#" class="botao botao-animado">Entre em contato</a>
+
+            </div>
+
+         </section>
+    </header>
+    <!--final do cabeçalho da pagina-->
+
+    <!--inicio do section pratique-mais-->
+
+    <section class="pratique-mais">
+        <div class="caixa-pai"><!--Essa classe será repetida ao longo do trabalho-->
+            <div class="pratique-mais-texto"><!--Essa classe será repetida ao longo do trabalho-->
+                <h3>Aprenda mais. Pratique!</h3>
+                <p>Praticar algumas horas durante a semana garante seu desenvolvimento </p>
+                <a href="#" class="botao">Entre em contato</a>
+            </div>
+            <div class="pratique-mais-imagem"><!--Essa classe será repetida ao longo do trabalho-->
+                <img src="img/img-1.png">
+            </div>
+        </div>
+
+    </section>
+    <!--final do section pratique-mais-->
+
+
+    <!-- section pratique-mais sendo repetido a partir daqui-->
+    <section class="pratique-mais">
+        <div class="caixa-pai">
+            <div class="pratique-mais-imagem">
+                <img src="img/img-2.png">
+            </div>
+             <!--observe que a ordem das divs foi invertida-->
+            <div class="pratique-mais-texto">
+                <h3>E siga assim, praticando!</h3>
+                <p>Esse exercício está mais bonitinho né? Quem sabe assim você se empolga e começa a praticar fora de sala de aula? </p>
+                <a href="#" class="botao">Entre em contato</a>
+            </div>
+            
+        </div>
+
+    </section>
+    <!--final do segundo section pratique-mais-->
+
+
+       <!--início do article relatos-->
+       <article class="relatos">
+            <div class="caixa-pai">
+                <h3>Depoimentos</h3>
+                <p>Veja o relato de quem praticou fora de sala</p>
+                <div class="cards-pessoas">
+                    <!--Card item 1-->
+                    <div class="itens-card">
+                        <img src="img/pessoa3.jpg" alt="descrição da imagem">
+                        <p class="user-nome">Sabrina de Oliveira</p>
+                        <p class="relato-user">
+                            Eu sou uma pessoa dedicada a aprender HTML e CSS todos os dias. Meu objetivo é me tornar um(a) desenvolvedor(a) web competente, construindo sites bonitos e funcionais.
+                        </p>
+                        
+                    </div>
+                    <!--final de Card item 1-->
+
+                    <!--Card item 2-->
+                    <div class="itens-card">
+                        <img src="img/pessoa2.jpg" alt="descrição da imagem">
+                        <p class="user-nome">Mariana Pinheiro</p>
+                        <p class="relato-user">
+                            "Estou empenhada em aprender HTML e CSS diariamente, buscando evoluir minhas habilidades para me tornar um(a) desenvolvedor(a) web completo(a). Meu foco é criar sites elegantes e eficientes, que ofereçam uma ótima experiência para os usuários."
+                        </p>
+                        
+                    </div>
+                    <!--final de Card item 2-->
+
+                    <!--Card item 3-->
+                    <div class="itens-card">
+                        <img src="img/pessoa1.jpg" alt="descrição da imagem">
+                        <p class="user-nome">Guilherme da Silva</p>
+                        <p class="relato-user">
+                            "Tenho me dedicado a estudar HTML e CSS todos os dias, com o objetivo de me tornar um(a) desenvolvedor(a) web habilidoso(a). Estou focado(a) em criar sites visualmente atraentes e altamente funcionais, aprimorando minhas habilidades constantemente."
+                        </p>
+                       
+                    </div>
+                    <!--final de Card item 3-->
+                </div>
+            </div>
+        </article>
+       <!--final do article relatos-->
+
+
+       <!--inicio do aside futuros-clientes-->
+       <aside class="futuros-clientes" style="background-color: #bed6f4;">
+        <div class="caixa-pai">
+            <h3>Seus futuros clientes</h3>
+            <p>Para quem você irá prestar serviços no futuro se estudar direitinho</p>
+        
+            <div>
+                <img src="img/apple.png" alt="apple logo">
+                <img src="img/microsoft.png" alt="microsoft logo">
+                <img src="img/slack.png" alt="slack logo">
+                <img src="img/google.png" alt="google logo">
+            </div>
+        </div>
+    </aside>
+       <!--final do aside futuros-clientes-->
+
+       <!--inicio do section pratique-mais aplicado pela terceira vez-->
+    <section class="pratique-mais">
+        <div class="caixa-pai">
+            <div class="pratique-mais-texto">
+                <h3>Não tenha preguiça. Pratique!</h3>
+                <p>Praticar algumas horas durante a semana garante seu desenvolvimento </p>
+                <a href="#" class="botao">Entre em contato</a>
+            </div>
+            <div class="pratique-mais-imagem">
+                <img src="img/security.png" alt="descrição da imagem">
+            </div>
+        </div>
+
+    </section>
+    <!--final do section pratique-mais 3-->
+
+
+    <!--início do footer-->
+    <footer class="fim">
+        <div class="caixa-pai">
+            <div class="hipertextos">
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-quora" aria-hidden="true"></i></a>
+            </div>
+            <p>Desenvolvido por <strong>Matheus Machado</strong></p>
+        </div>
+    </footer>
+    <!--final do footer-->
+</main>
+</body>
+</html>
