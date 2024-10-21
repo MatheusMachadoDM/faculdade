@@ -45,32 +45,33 @@ Exemplo 2:
 
 int main(int argc, char** argv) {
 	setlocale(LC_ALL,"portuguese");
+
+	int M[3][3] = {{8,1,6}, {3,5,7}, {4,9,2}}, i , V[8] = {0,0,0,0,0,0,0,0};
+	bool magico;
 	
-	int matriz[3][3] = {{2,9,4},{7,5,3},{6,1,8}}, i, j, vetor[8]= {{15,15,15,15,15,15,15,15}};
-	
-	for(i = 0; i < 3; i++){
+	for(i = 0; i < 3; i ++){
+		V[0] += M[0][i];
 		
-		for(j = 0; j < 3; j++){
-			
+		V[1] += M[1][i];
+		
+		V[2] += M[2][i];
+		
+		V[3] += M[i][0];
+		
+		V[4] += M[i][1];
+		
+		V[5] += M[i][2];
+		
+		V[6] += M[i][i];
+		
+		V[7] += M[i][2 - i];
+	}
+	for(i = 1; i < 8; i++){
+		if(V[i] != V[0]){
+			printf("A matriz NÂO é um quadrado mágico.");
+            return 0;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		printf("A matriz é um quadrado mágico!");
 	return 0;
 }

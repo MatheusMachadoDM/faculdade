@@ -1,0 +1,122 @@
+create database bibliotecamaluca;
+
+use bibliotecamaluca;
+
+create table autor(
+nome varchar (50),
+primary key (nome)
+);
+
+describe autor;
+
+create table livros(
+id int not null auto_increment,
+nome varchar (50) not null,
+ano year,
+autor varchar (50),
+genero varchar (15),
+exemplares int,
+primary key (id),
+foreign key (autor) references autor(nome)
+);
+
+describe livros;
+
+create table membros(
+id int not null auto_increment,
+nome varchar (50),
+email varchar (50),
+cep int (9),
+rua_num_comp varchar (100),
+telefone int(11),
+primary key (id)
+);
+
+describe membros;
+
+create table generos(
+genero varchar (15),
+primary key (genero)
+);
+
+describe generos;
+
+create table emprestimos(
+id int not null auto_increment,
+membro int not null,
+livro int not null,
+emprestimo date not null,
+devolucao_previstra date not null,
+devolucao_real date,
+primary key (id),
+foreign key (membro) references membros (id),
+foreign key (livro) references livros (id)
+);
+
+describe emprestimos;
+
+insert into autor (nome) values ("Jane Austen"), ("Gabriel García Márquez"), ("Haruki Murakami"), ("Chimamanda Ngozi Adichie"), ("Isaac Asimov");
+
+select * from autor;
+
+delete from autor where nome = "Jane Austen";
+
+insert into autor (nome) values ("Ocean Vuong");
+
+ALTER TABLE livros MODIFY genero VARCHAR(30);
+
+INSERT INTO livros (nome, ano, autor, genero, exemplares) 
+VALUES ('On Earth We\'re Briefly Gorgeous', 2019, 'Ocean Vuong', 'Ficção Contemporânea', 3),
+('Cem Anos de Solidão', 1967, 'Gabriel García Márquez', 'Realismo Mágico', 3),
+('Norwegian Wood', 1987, 'Haruki Murakami', 'Ficção Contemporânea', 5),
+('Americanah', 2013, 'Chimamanda Ngozi Adichie', 'Romance', 2),
+('Fundação', 1951, 'Isaac Asimov', 'Ficção Científica', 6);
+
+select * from livros;
+
+ALTER TABLE generos RENAME TO categorias;
+
+ALTER TABLE membros MODIFY telefone VARCHAR(15);
+
+INSERT INTO membros (nome, email, cep, rua_num_comp, telefone) 
+VALUES ('Ana Silva', 'ana.silva@exemplo.com', 12345678, 'Rua das Flores, 123, Apto 12', 11987654321),
+('João Pereira', 'joao.pereira@exemplo.com', 23456789, 'Avenida Brasil, 456, Casa', 11876543210),
+('Maria Oliveira', 'maria.oliveira@exemplo.com', 34567890, 'Rua das Laranjeiras, 789', 11765432109),
+('Carlos Santos', 'carlos.santos@exemplo.com', 45678901, 'Rua do Sol, 321', 11654321098),
+('Luísa Costa', 'luisa.costa@exemplo.com', 56789012, 'Rua do Mar, 654', 11543210987);
+
+INSERT INTO categorias (genero) 
+VALUES ('Ficção'),
+('Não-Ficção'),
+('Fantasia'),
+('Romance'),
+('Ficção Científica');
+
+ALTER TABLE categorias MODIFY genero VARCHAR(30);
+
+INSERT INTO emprestimos (membro, livro, emprestimo, devolucao_previstra, devolucao_real) 
+VALUES (1, 1, '2024-10-01', '2024-10-15', '2024-10-10'),
+(2, 2, '2024-10-02', '2024-10-16', NULL),
+(3, 3, '2024-10-03', '2024-10-17', NULL),
+(4, 4, '2024-10-04', '2024-10-18', NULL),
+(5, 5, '2024-10-05', '2024-10-19', '2024-10-15');
+
+select * from autor where nome like 'A%';
+
+SELECT * FROM livros WHERE nome LIKE '%sistema%';
+
+SELECT id, nome FROM livros WHERE ano < YEAR(CURDATE()) - 5;
+
+SELECT * FROM livros WHERE exemplares < 5 ORDER BY nome ASC;
+
+SELECT * FROM livros WHERE id NOT IN (SELECT livro FROM emprestimos);
+
+UPDATE emprestimos SET devolucao_real = CURDATE();
+
+UPDATE emprestimos SET devolucao_previstra = DATE_ADD(devolucao_previstra, INTERVAL 1 MONTH);
+
+DELETE FROM membros WHERE id NOT IN (SELECT membro FROM emprestimos);
+
+DELETE FROM categorias WHERE genero NOT IN (SELECT DISTINCT genero FROM livros);
+
+select * from categorias;
