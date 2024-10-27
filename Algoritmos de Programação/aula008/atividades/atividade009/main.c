@@ -10,6 +10,8 @@
 	voluntário deve ter idade entre 16 e 69 anos, pesar pelo menos 50 kg, estar bem alimentado e não
 	estar resfriado. O programa deve ler os dados e imprimir no final o nome do voluntário e se ele está
 	apto ou não a doar sangue.
+	
+	
 */
 
 int main(int argc, char *argv[]) {
@@ -25,8 +27,8 @@ int main(int argc, char *argv[]) {
 	printf("Idade do voluntário: ");
 	scanf("%d", &idade);
 	
-	printf("Peso do voluntário: EX: 50.5: ");
-	scanf("%d", &peso);
+	printf("Peso do voluntário: EX: 50,5: ");
+	scanf("%f", &peso);
 	
 	printf("Ele apresentou um documento com foto? [s] ou [n]: ");
 	scanf(" %c", &documento);
@@ -37,7 +39,7 @@ int main(int argc, char *argv[]) {
 	printf("Ele está bem alimentado? [s] ou [s]: ");
 	scanf(" %c", &alimentado);
 	
-	if(idade > 16 && idade < 69 && peso > 50 && documento == 's' && doente == 'n' && alimentado =='s'){
+	if(idade > 15 && idade < 70 && peso >= 50 && documento == 115 || documento == 83 && doente == 110 || doente == 78 && alimentado == 115 || alimentado == 83){
 		printf("\nVoluntário %s apto!", nome);
 		system("color 02");
 	}else{
