@@ -29,14 +29,17 @@ int main(int argc, char *argv[]) {
 		while (getchar() != '\n');
 		
 		media += registros[i].preco;
-		printf("\n");
 	}
 	media = media / 5;
 	
+	printf("\nMédia dos preços: %.2f\n", media);
+	
 	for(i=0;i<5;i++){
+		
 		if(registros[i].preco < media){
-			printf("A loja %s oferece o produto com valor menor do que a média!\n");
+			printf("\nA loja %s está com o preço a baixo da média!", registros[i].loja);
 		}
+		
 	}
 	
 	return 0;
