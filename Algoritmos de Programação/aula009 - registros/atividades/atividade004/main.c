@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	
 	struct Produto produto[5] = {{123, 10}, {321, 5}, {213, 20}, {312, 15}, {132, 20}};
 	int codigo, quantidade, i, quantidadeAtualizada;
-	bool estoque;
+	bool codigoEncontrado, estoque;
 	
 	printf("Digite o codigo do produto que deseja atualizar: ");
 	scanf("%d", &codigo);
@@ -30,19 +30,23 @@ int main(int argc, char *argv[]) {
 		if(codigo == produto[i].codigo){
 			if(quantidade <= produto[i].quantidade){
 				produto[i].quantidade -= quantidade;
-				estoque = true;
+				codigoEncontrado = true;
 				quantidadeAtualizada = produto[i].quantidade;
 				i = 5;
+			}else{
+				
 			}
 		}else{
-			estoque = false;
+			codigoEncontrado = false;
 		}
 	}
 	
-	if(estoque == true){
+	if(codigoEncontrado == true){
 		printf("Estoque atualizado! Quantidade em estoque após atualização: %d", quantidadeAtualizada);
+		system("color 02");
 	}else{
-		printf("Quantidade insuficiente em estoque!");
+		printf("Quantidade insuficiente em estoque ou código errado!");
+		system("color 04");
 	}
 	return 0;
 }
