@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+header{
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+header > img{
+    margin: -15px 0px;
+    width: 250px;
+}
+nav{
+    font-size: 2em;
+}
+nav > a{
+    text-decoration: none;
+    color: #E3B845;
+    margin: 10px;
+}
+.principal{
+    height: 650px;
+    background: url(imagens/imagemPorDoSol.jpeg) center center no-repeat;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.principal h1{
+    color: white;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.692);
+}
+.principal p{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.692);
+    margin: 10px;
+}
+.principal a{
+    color: #E3B845;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.938);
+    border-radius: 5px;
+    padding: 18px 30px;
+    margin: 10px;
+}
+.carrossel{
+    height: 650px;
+
+    display: flex;
+
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.carrossel h2, .carrossel p, .carrossel hr{
+    color: #E3B845;
+    margin: 10px 20px;
+   
+}
+.carrossel h2{
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+.carrossel p{
+    text-align: center;
+    font-size: 1.1em;
+}
+.carrossel hr{
+    width: 200px;
+    height: 2px;
+    background: #E3B845;
+    border: none;
+}
+.informacoes{
+    height: 800px;
+    background-color: #E3B845;
+}
+
+
