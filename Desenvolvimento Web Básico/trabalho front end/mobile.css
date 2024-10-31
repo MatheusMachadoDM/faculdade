@@ -84,6 +84,32 @@ nav > a{
 .informacoes{
     height: 800px;
     background-color: #E3B845;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.informacoes h2, .informacoes h3, .informacoes hr, .informacoes p{
+    color: #776125;
+    margin: 10px;
+}
+span{
+    color: #776125;
+    font-size: 2rem;
+}
+.informacoes h2, .informacoes h3{
+    font-size: 2em;
+}
+.informacoes hr{
+    width: 200px;
+    height: 2px;
+    background: #776125;
+    border: none;
+}
+.informacoes p{
+    color: white;
+    text-align: center;
 }
 
 
