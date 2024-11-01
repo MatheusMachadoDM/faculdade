@@ -122,12 +122,56 @@ span{
     flex-flow: column nowrap;
 
     align-items: center;
+    justify-content: center;
 }
-.newsletter h2, .newsletter p, .newsletter hr, label{
+.newsletter h2, .newsletter p, .newsletter hr,.newsletter label{
     color: #E3B845;
+    margin: 10px;
+}
+.newsletter h2{
+    font-size: 2em;
 }
 .newsletter p{
     text-align: center;
+  
+}
+.email{
+    display: flex;
+    flex-flow: row nowrap;
+
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+.newsletter input{
+    width: 300px;
+    height: 57px;
+    border-radius: 5px;
+    color: #E3B845;
+    border: 1px solid #E3B845;
+    padding: 10px;
+    margin-right: 10px;
+}
+.newsletter .enviar{
+    background-color: #E3B845;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    flex-basis: 50px;
+}
+.newsletter .enviar:hover{
+    background-color: #9c8030;
+}
+footer{
+    height: 40px;
+    background-color: #E3B845;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: white;
 }
 
 
