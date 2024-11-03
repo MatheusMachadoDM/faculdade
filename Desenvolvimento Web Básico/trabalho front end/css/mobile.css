@@ -97,12 +97,12 @@
     margin-left: -75%;
 }
 .informacoes{
-    height: 800px;
     background-color: #E3B845;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .informacoes h2, .informacoes h3, .informacoes p{

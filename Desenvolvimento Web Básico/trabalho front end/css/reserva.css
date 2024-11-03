@@ -100,3 +100,22 @@ body{
 #limpar:hover{
     background-color: rgb(231, 225, 225);
 }
+@media screen and (max-width: 600px) {
+    fieldset{
+        margin: 40px 20px 0px 20px;
+        font-size: 1.4em;
+    }
+    .botao-mobile{
+        margin: 0px 16px 40px 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #enviar, #limpar{
+        font-size: 1.1em;
+        flex: 1 1 150px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+}

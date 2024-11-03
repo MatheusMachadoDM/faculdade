@@ -51,7 +51,15 @@ color: white;
         flex-flow: column nowrap;
         align-items: center;
     }
+    nav{
+        flex-flow: column nowrap;
+        width: 100%;
+        padding: 2px;
+
+    }
     nav a{
-        margin: 0px;
+        margin: 2px;
+        border: 1px solid #E3B845;
+        border-radius: 5px;
     }
 }
