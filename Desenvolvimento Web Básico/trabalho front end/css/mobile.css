@@ -7,7 +7,7 @@
 }
 .principal{
     height: 650px;
-    background: url(../imagens/imagemPorDoSol.jpg) center center;
+    background: url(../imagens/imagemPraia.jpg) center center fixed;
     background-size: cover;
 
     display: flex;
@@ -106,11 +106,11 @@
 }
 
 .informacoes h2, .informacoes h3, .informacoes p{
-    color: #776125;
+    color: #8f7736;
     margin: 10px;
 }
 span{
-    color: #776125;
+    color: #8f7736;
     font-size: 2rem;
     margin-top: 20px;
 }
