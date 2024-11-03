@@ -61,5 +61,6 @@ color: white;
         margin: 2px;
         border: 1px solid #E3B845;
         border-radius: 5px;
+        text-align: center;
     }
 }
