@@ -1,6 +1,9 @@
 body{
     height: 100vh;
 }
+header{
+    border-bottom: 1px solid #d4a017;
+}
 main{
     height: 100%;
     display: flex;
