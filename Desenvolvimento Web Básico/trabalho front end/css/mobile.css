@@ -5,26 +5,6 @@
     font-family: Arial, sans-serif;
     text-align: center;
 }
-header{
-    height: 300px;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-}
-header > img{
-    margin: -15px 0px;
-    width: 250px;
-}
-nav{
-    font-size: 2em;
-}
-nav > a{
-    text-decoration: none;
-    color: #E3B845;
-    margin: 10px;
-}
 .principal{
     height: 650px;
     background: url(../imagens/imagemPorDoSol.jpg) center center;
@@ -57,8 +37,7 @@ nav > a{
     margin: 10px;
 }
 .carrossel{
-    height: 580px;
-
+    height: fit-content;
     display: flex;
 
     flex-flow: column nowrap;
@@ -84,16 +63,18 @@ nav > a{
     border: none;
 }
 .slider{
-    width: 98%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     overflow: hidden;
+    margin-bottom: -4px;
+    border-radius: 10px 10px 0px 0px;
 }
 .slides{
     width: 400%;
     height: 100%;
     display: flex;
 }
-.slides input{
+.slides input, .navigation-auto div{
     display: none;
 }.slide{
     width: 25%;
@@ -102,26 +83,6 @@ nav > a{
 }
 .slide img{
     width: 100%;
-}
-.manual-navigation{
-    position: absolute;
-    width: 100%;
-    margin-top: -60px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-.manual-btn:hover{
-    background-color: white;
 }
 #radio1:checked ~ .first{
     margin-left: 0;
@@ -135,37 +96,8 @@ nav > a{
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-.navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.navigation-auto{
-    position: absolute;
-    width: 100%;
-    margin-top: 333px; /*ARRUMAR*/
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: white;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: white;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: white;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: white;
-}
 .informacoes{
-    height: 730px;
+    height: 800px;
     background-color: #E3B845;
 
     display: flex;
@@ -230,6 +162,7 @@ span{
 }
 #iemail{
     text-align: start;
+    margin: 10px;
 }
 .newsletter input{
     width: 300px;
@@ -250,16 +183,6 @@ span{
 .newsletter .enviar:hover{
     background-color: #9c8030;
 }
-footer{
-    height: 40px;
-    background-color: #E3B845;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer p{
-    color: white;
-}
 
 

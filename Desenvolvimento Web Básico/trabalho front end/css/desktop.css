@@ -1,27 +1,22 @@
+
 @media screen and (min-width: 1000px){
-    header{
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 10px;
-    }
-    nav a{
-        padding: 10px;
-    }
-    nav a:hover{
-        background-color: #E3B845;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-    }
     .principal{
         background: url(../imagens/imagemPorDoSol.jpg) center bottom no-repeat;
         background-size: cover;
 
     }
     .informacoes{
-        height: 500px;
+        height: 600px;
         padding: 20px;
         justify-content: space-around;
+    }
+    .carrossel{
+        justify-content: center;
+        height: fit-content;
+    }
+    .slider{
+        width: 80%;
+        height: 100%;
     }
     .grid{
        display: flex;
@@ -41,5 +36,10 @@
     }
     #iemail{
         width: 500px;
+    }
+}
+@media screen and (min-width: 1400px){
+    .slider{
+        width: 50%;
     }
 }
