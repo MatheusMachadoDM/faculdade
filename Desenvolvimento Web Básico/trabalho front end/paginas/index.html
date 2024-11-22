@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/navFotter.css">
     <link rel="stylesheet" href="../css/mobile.css">
     <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
     <style>
     </style>
 </head>
@@ -100,11 +101,24 @@
                 <input type="submit" value="CADASTRAR" class="enviar">
             </div>
         </aside>
+        <div id="chatbot">
+            <div id="chatbot-header">Chatbot <span id="close-chatbot">X</span></div>
+            <div id="chatbot-messages">
+                <div class="bot-message">Olá! Como posso ajudá-lo hoje?</div>
+            </div>
+            <div id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Digite sua mensagem..." />
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+        <button id="open-chatbot">Precisa de ajuda?</button>
+        
     </main>
     <footer>
         <p>Site criado apenas para estudo pessoal.</p>
     </footer>
 
     <script src="../scripts/carrossel.js"></script>
+    <script src="../scripts/chatbot.js"></script>
 </body>
 </html>

@@ -96,41 +96,58 @@
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-.informacoes{
+.informacoes {
     background-color: #E3B845;
 
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-rows: auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    gap: 20px;
 }
 
-.informacoes h2, .informacoes h3, .informacoes p{
+.informacoes h2, .informacoes h3, .informacoes p {
     color: #8f7736;
     margin: 10px;
 }
-span{
+
+span {
     color: #8f7736;
     font-size: 2rem;
     margin-top: 20px;
 }
-.informacoes h2{
+
+.informacoes h2 {
     margin-top: 30px;
 }
-.informacoes h2, .informacoes h3{
+
+.informacoes h2, .informacoes h3 {
     font-size: 2em;
 }
-.informacoes p{
+
+.informacoes p {
     color: white;
     text-align: center;
 }
 
-.grid-interna, .grid-interna0{
-    display: flex;
-
-    flex-flow: column nowrap;
-    align-items: center;
+.grid-interna0 {
     text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.grid-interna {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 10px;
 }
 .newsletter{
     height: 400px;

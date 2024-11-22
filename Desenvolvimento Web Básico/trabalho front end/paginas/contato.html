@@ -7,7 +7,8 @@
     <meta name="keywords" content="hotel, contato, reservas, hospedagem">
     <title>Contato - Hotel Consagrado</title>
     <link rel="stylesheet" href="../css/navFotter.css">
-    <link rel="stylesheet" href="../css/contato.css"> <!-- CSS Externo -->
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
     <style>
       
     </style>
@@ -67,10 +68,22 @@
                 <!-- Exibir Dados Submetidos -->
                 <div class="submitted-data" id="submittedData"></div>
             </section>
+            <div id="chatbot">
+                <div id="chatbot-header">Chatbot <span id="close-chatbot">X</span></div>
+                <div id="chatbot-messages">
+                    <div class="bot-message">Olá! Como posso ajudá-lo hoje?</div>
+                </div>
+                <div id="chatbot-input-area">
+                    <input type="text" id="chatbot-input" placeholder="Digite sua mensagem..." />
+                    <button id="send-message">Enviar</button>
+                </div>
+            </div>
+            <button id="open-chatbot">Precisa de ajuda?</button>
     </main>
     <footer>
         <p>Site criado apenas para estudo pessoal</p>
     </footer>
     <script src="../scripts/contato.js"></script>
+    <script src="../scripts/chatbot.js"></script>
 </body>
 </html>

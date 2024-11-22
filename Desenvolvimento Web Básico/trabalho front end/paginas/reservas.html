@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/navFotter.css">
     <link rel="stylesheet" href="../css/reserva.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
      <script src="../scripts/formulario.js"> </script>
 </head>
 <body>
@@ -56,10 +57,22 @@
                 <button id="limpar" type="reset">Limpar</button>
             </div>
         </form>
+        <div id="chatbot">
+            <div id="chatbot-header">Chatbot <span id="close-chatbot">X</span></div>
+            <div id="chatbot-messages">
+                <div class="bot-message">Olá! Como posso ajudá-lo hoje?</div>
+            </div>
+            <div id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Digite sua mensagem..." />
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+        <button id="open-chatbot">Precisa de ajuda?</button>
     </main>
     <footer style="margin-top: auto;">
         <p>Site criado apenas para estudo pessoal.</p>
     </footer>
+    
+    <script src="../scripts/chatbot.js"></script>
 </body>
-
 </html>
