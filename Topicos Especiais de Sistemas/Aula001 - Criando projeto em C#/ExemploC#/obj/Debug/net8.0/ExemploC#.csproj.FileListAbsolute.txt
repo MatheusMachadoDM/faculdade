@@ -1,0 +1,29 @@
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\bin\Debug\net8.0\ExemploC#.exe
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\bin\Debug\net8.0\ExemploC#.deps.json
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\bin\Debug\net8.0\ExemploC#.runtimeconfig.json
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\bin\Debug\net8.0\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\bin\Debug\net8.0\ExemploC#.pdb
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.AssemblyInfoInputs.cache
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.AssemblyInfo.cs
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.csproj.CoreCompileInputs.cache
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\refint\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.pdb
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ExemploC#.genruntimeconfig.cache
+C:\Users\MATHEUSMACHADODAMOTA\ExemploC#\obj\Debug\net8.0\ref\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\bin\Debug\net8.0\ExemploC#.exe
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\bin\Debug\net8.0\ExemploC#.deps.json
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\bin\Debug\net8.0\ExemploC#.runtimeconfig.json
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\bin\Debug\net8.0\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\bin\Debug\net8.0\ExemploC#.pdb
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.AssemblyInfoInputs.cache
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.AssemblyInfo.cs
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.csproj.CoreCompileInputs.cache
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.sourcelink.json
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\refint\ExemploC#.dll
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.pdb
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ExemploC#.genruntimeconfig.cache
+C:\Users\MATHEUSMACHADODAMOTA\Documents\GitHub\faculdade\Topicos Especiais de Sistemas\Aula001\ExemploC#\obj\Debug\net8.0\ref\ExemploC#.dll
