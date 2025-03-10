@@ -1,4 +1,3 @@
-package LeituraDeDados.src;
 import java.util.Scanner;
 
 public class LeituraDeDados{
