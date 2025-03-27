@@ -1,0 +1,13 @@
+//Teste da aplicação
+
+### Lista de Carros
+GET http://localhost:5169/api/carros
+
+### Cadastrar Carro
+
+POST http://localhost:5169/api/carros
+Content-Type: application/json
+
+{
+    "name": "Fusca 1956"
+}
