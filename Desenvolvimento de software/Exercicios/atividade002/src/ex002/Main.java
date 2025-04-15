@@ -31,27 +31,37 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		Aluno aluno1 = new Aluno();
 		
+		aluno1.setNome(pegarNome(scanner));
+		aluno1.setN1(pegarNota(scanner, "primeira"));
+		aluno1.setN2(pegarNota(scanner, "segunda"));
+		
+		mostrarDados(aluno1);
+		
+	}
+	public static String pegarNome(Scanner scanner) {
+		String nome;
+		
 		System.out.print("Digite o nome do aluno: ");
-		aluno1.setNome(scanner.nextLine());
+		nome = scanner.nextLine();
 		
-		System.out.println("Digite a primeira nota: ");
-		aluno1.setN1(scanner.nextFloat());
+		return nome;
+	}
+	public static float pegarNota(Scanner scanner, String notaOrdinal) {
+		float nota;
+		System.out.print("Digite a " + notaOrdinal + " nota: ");
+		nota = scanner.nextFloat();
 		
-		System.out.println("Digite a segunda nota: ");
-		aluno1.setN2(scanner.nextFloat());
+		return nota;
+	}
+	public static void mostrarDados(Aluno aluno) {
+		System.out.println("\nAluno: " + aluno.getNome());
+		System.out.println("Média: " + aluno.media());
 		
-		System.out.println("Aluno: " + aluno1.getNome());
-		
-		float media = (aluno1.getN1() + aluno1.getN2()) / 2;
-		System.out.println("Média: " + media);
-		
-		
-		if(media >= 7) {
-			System.out.println("Status: Aprovado!");
+		if(aluno.media() >= 7) {
+			System.out.println("Status: Aprovado!\n");
 		}else {
-			System.out.println("Status: Reprovado!");
+			System.out.println("Status: Reprovado!\n");
 		}
 		
-		scanner.close();
 	}
 }
