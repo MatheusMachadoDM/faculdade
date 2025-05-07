@@ -6,16 +6,25 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Scanner;
 
+
+class LivroIndisponivelException extends Exception {
+    public LivroIndisponivelException(String mensagem) {
+        super(mensagem);
+    }
+}
+
+
+class LivroDuplicadoException extends Exception {
+    public LivroDuplicadoException(String mensagem) {
+        super(mensagem);
+    }
+}
+
 public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Map<String, Livro> livros = new HashMap<>();
 		Set<String> isbnCadastrado = new HashSet<>();
-		
-
-		Livro livro1 = new Livro("Senhor", "jose", "123", true);
-		
-		livros.put(livro1.getISBN(), livro1);
 		
 		int opcao;
 
@@ -41,23 +50,64 @@ public class Main {
              		System.out.print("ISBN: ");
              		String ISBN = scanner.nextLine();
              		
-             		if(isbnCadastrado.contains(ISBN)) {
-             			System.out.print("ISBN já cadastrado, tente novamnete: ");
-             			ISBN = scanner.nextLine();
-             		}else {
-             			Livro livro = new Livro(titulo, autor, ISBN, true);
-             			livros.put(ISBN, livro);
-             			isbnCadastrado.add(ISBN);
-             			System.out.println("Livro Cadastrado!");
+             		try {
+             		    if (isbnCadastrado.contains(ISBN)) {
+             		        throw new LivroDuplicadoException("ISBN já cadastrado, tente novamente.");
+             		    } else {
+             		        Livro livro = new Livro(titulo, autor, ISBN, true);
+             		        livros.put(ISBN, livro);
+             		        isbnCadastrado.add(ISBN);
+             		        System.out.println("Livro cadastrado!");
+             		    }
+             		} catch (LivroDuplicadoException e) {
+             		    System.out.println("Erro: " + e.getMessage());
              		}
+
      		break;
      		
-            case 2: System.out.println("Digite o ISBN para embrestar: ");
-            		String isbnEmprestar = scanner.nextLine();
+            case 2: System.out.print("Digite o ISBN do livro que deseja emprestar: ");
+		            String isbnParaEmprestimo = scanner.nextLine();
+		
+		            try {
+		                if (livros.containsKey(isbnParaEmprestimo)) {
+		                    Livro livro = livros.get(isbnParaEmprestimo);
+		                    livro.emprestar(); 
+		                } else {
+		                    System.out.println("Livro não encontrado!");
+		                }
+		            } catch (LivroIndisponivelException e) {
+		                System.out.println("Erro: " + e.getMessage());
+		            }
+		            break;
+
+	            
+            case 3: System.out.print("Digite o ISBN do livro que deseja devolver: ");
+            		String isbnDevolver = scanner.nextLine();
             		
+            		if(livros.containsKey(isbnDevolver)) {
+            			Livro livro = livros.get(isbnDevolver);
+            			livro.devolver();
+            		}else {
+            			System.out.println("Livro não encontrado!");
+            		}
+            		break;
             		
-            
-         		
+            case 4:  if (livros.isEmpty()) {
+	                System.out.println("Nenhum livro cadastrado.");
+            		}else {
+            			System.out.println("\n--- Lista de Livros ---\n");
+	                	for (Livro livro : livros.values()) {
+		                    System.out.println("Título: " + livro.getTitulo());
+		                    System.out.println("Autor: " + livro.getAutor());
+		                    System.out.println("ISBN: " + livro.getISBN());
+		                    System.out.println("Disponibilidade: " + (livro.isDisponibilidade() ? "Disponível" : "Emprestado"));
+		                    System.out.println("------------------------");
+	                	}
+            		}
+            		break;
+            case 5: System.out.println("Programa finalizado!");
+            		break;
+            	
      		default: System.out.println("Opção Inválida!");
             }
             
