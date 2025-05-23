@@ -1,5 +1,18 @@
 package Model;
 
+public class Hospede extends Pessoa {
+	private String fone;
+
+	public Hospede(String nome, String cpf, String fone) {
+		super(nome, cpf);
+		this.fone = fone;
+	}
+}
+
+
+
+/*package Model;
+
 public class Hospede implements iCrud{
 	private String nome, cpf, telefone;
 	
@@ -66,4 +79,4 @@ public class Hospede implements iCrud{
 	}
 	
 	
-}
+}*/
