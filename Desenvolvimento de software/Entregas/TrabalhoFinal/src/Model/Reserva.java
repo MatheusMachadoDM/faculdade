@@ -5,6 +5,7 @@ public class Reserva implements iCrud{
 	private Hospede hospede;
 	
 	
+	
 	public Reserva(int idQuarto, int checkIn, int checkOut, Hospede hospede) {
 		this.idQuarto = idQuarto;
 		this.checkIn = checkIn;
