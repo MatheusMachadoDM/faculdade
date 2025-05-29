@@ -12,6 +12,7 @@ public class HotelController {
 	private List<Reserva> reservas 	= new ArrayList<>();
 	private List<Quarto> quartos 	= new ArrayList<>();
 	
+	// Métodos para adicionar itens às listas correspondentes
 	public void adicionarHospede(Hospede h) {
 		hospedes.add(h);
 	}
@@ -24,15 +25,16 @@ public class HotelController {
 		quartos.add(q);
 	}
 	
-	public List<Hospede> listarHospede() {
+	// Métodos para apresentar a lista correspondente
+	public List<Hospede> listarHospedes() {
 		return hospedes;
 	}
 	
-	public List<Reserva> listarReserva() {
+	public List<Reserva> listarReservas() {
 		return reservas;
 	}
 	
-	public List<Quarto> listaQuartos() {
+	public List<Quarto> listarQuartos() {
 		return quartos;
 	}
 }

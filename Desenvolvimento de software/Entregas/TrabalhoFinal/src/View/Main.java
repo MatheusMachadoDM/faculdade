@@ -27,24 +27,32 @@ public class Main {
             scanner.nextLine(); // Limpar buffer
             
             switch(opcao) {
-            	case 1: System.out.print("Nome: ");
-    					String nome = scanner.nextLine();
+            	case 1: 
+					System.out.print("Nome: ");
+    				String nome = scanner.nextLine();
     					
-    					System.out.print("CPF: ");
-    					String cpf = scanner.nextLine();
-    					
-    					System.out.print("Telefone: ");
-    					String telefone = scanner.nextLine();
-    					
-    					controller.adicionarHospede(new Hospede(nome, cpf, telefone));
-    			break;
-    			
-            	case 2: controller.listarHospede().forEach(System.out::println);
-            	break;
-            	
-            	
+    				System.out.print("CPF: ");
+    				String cpf = scanner.nextLine();
+    				
+    				System.out.print("Telefone: ");
+    				String telefone = scanner.nextLine();
+					
+					// Cria um objeto 'h' tipo 'Hospede' com as informações fornecidas
+   					Hospede h = new Hospede();
+					h.setNome(nome);
+					h.setCpf(cpf);
+					h.setFone(telefone);
+					
+					// Adiciona o Hospede criado na lista de hospedes
+					controller.adicionarHospede(h);
+
+    				break;
+				case 2:
+					controller.listarHospedes();
+					break;
             }
 		}while(opcao != 0);
 		
+		scanner.close();
 	}
 }
