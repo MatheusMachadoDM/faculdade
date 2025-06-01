@@ -1,84 +1,59 @@
 package Model;
 
-public class Reserva implements iCrud{
-	private int idQuarto, checkIn, checkOut;
-	private Hospede hospede;
+import java.time.LocalDate;
+
+public class Reserva {
+	private Cliente cliente;
+	private Quarto quarto;
+	private LocalDate dataEntrada, dataSaida;
 	
-	
-	public Reserva(int idQuarto, int checkIn, int checkOut, Hospede hospede) {
-		this.idQuarto = idQuarto;
-		this.checkIn = checkIn;
-		this.checkOut = checkOut;
-		this.hospede = hospede;
+	public Reserva(Cliente cliente, Quarto quarto, LocalDate dataEntrada, LocalDate dataSaida) {
+		this.cliente = cliente;
+		this.quarto = quarto;
+		this.dataEntrada = dataEntrada;
+		this.dataSaida = dataSaida;
 	}
 
-
-	public int getIdQuarto() {
-		return idQuarto;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-
-	public void setIdQuarto(int idQuarto) {
-		this.idQuarto = idQuarto;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
-
-	public int getCheckIn() {
-		return checkIn;
+	public Quarto getQuarto() {
+		return quarto;
 	}
 
-
-	public void setCheckIn(int checkIn) {
-		this.checkIn = checkIn;
+	public void setQuarto(Quarto quarto) {
+		this.quarto = quarto;
 	}
 
-
-	public int getCheckOut() {
-		return checkOut;
+	public LocalDate getDataEntrada() {
+		return dataEntrada;
 	}
 
-
-	public void setCheckOut(int checkOut) {
-		this.checkOut = checkOut;
+	public void setDataEntrada(LocalDate dataEntrada) {
+		this.dataEntrada = dataEntrada;
 	}
 
-
-	public Hospede getHospede() {
-		return hospede;
+	public LocalDate getDataSaida() {
+		return dataSaida;
 	}
 
-
-	public void setHospede(Hospede hospede) {
-		this.hospede = hospede;
-	}
-
-
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void atualizar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void consultar() {
-		// TODO Auto-generated method stub
-		
+	public void setDataSaida(LocalDate dataSaida) {
+		this.dataSaida = dataSaida;
 	}
 	
+	//Calcula a quantidade de dias entre dataEntrada e dataSaida usando a classe ChronoUnit.DAYS da API de datas
+	public long getTotalDias() {
+		return java.time.temporal.ChronoUnit.DAYS.between(dataEntrada, dataSaida);
+	}
 	
+	//Multiplica a quantidade de dias pelo valor da reserva
+	public double getValorTotal() {
+		return getTotalDias() * quarto.getPrecoPorNoite();
+	}
 }
+
