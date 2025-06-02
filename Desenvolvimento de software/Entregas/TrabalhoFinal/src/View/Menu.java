@@ -3,8 +3,12 @@ package View;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+import java.io.*;
+import java.util.InputMismatchException;
 
 import Controller.*;
+import Exception.QuartoIndisponivelException;
+import Exception.ReservaNaoEncontradaException;
 import Model.*;
 
 public class Menu {
@@ -40,14 +44,14 @@ public class Menu {
 	            default: System.out.println("Opção inválida.");
 	            		break;
 	            }
-		 }while(opcao != 0); 
+		 } while(opcao != 0); 
 	}
 	
 	private static void listarQuartosDisponiveis() {
 		List<Quarto> quartos = controller.getQuartosDisponiveis();
 		if(quartos.isEmpty()) {
 			System.out.println("Nenhum quarto disponível no momento.");
-		}else {
+		} else {
 			System.out.println("Quartos disponíveis:");
 			for(Quarto q : quartos) {
 				System.out.println("Número: " + q.getNumero() + " | Tipo: " + q.getTipo() + " | Preço: R$ " + q.getPrecoPorNoite());
@@ -87,7 +91,7 @@ public class Menu {
 		List<Reserva> reservas = controller.getReservas();
 		if(reservas.isEmpty()) {
 			 System.out.println("Nenhuma reserva cadastrada.");
-		}else {
+		} else {
 			for(Reserva r : reservas) {
 				System.out.println("Cliente: " + r.getCliente().getNome() + " | CPF: " + r.getCliente().getCpf() +
 		                   " | Quarto: " + r.getQuarto().getNumero() + " | Entrada: " + r.getDataEntrada() +
@@ -96,15 +100,20 @@ public class Menu {
 		}
 	}
 	
+	
 	private static void cancelarReserva() {
 		System.out.print("Informe o CPF da reserva a cancelar: ");
 		String cpf = scanner.nextLine();
-		
-		boolean cancelada = controller.cancelarReservaPorCPF(cpf);
-		if(cancelada) {
-			System.out.println("Reserva cancelada com sucesso.");
-		}else {
-			System.out.println("Nenhuma reserva encontrada com esse CPF.");
+
+		try {
+			if(!controller.cancelarReservaPorCPF(cpf)) {
+				throw new ReservaNaoEncontradaException();
+			} else {
+				System.out.println("Reserva cancelada com sucesso.");
+			}
+		} catch(ReservaNaoEncontradaException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 }
+
