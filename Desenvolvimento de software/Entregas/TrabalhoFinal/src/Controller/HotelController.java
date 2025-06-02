@@ -3,7 +3,9 @@ package Controller;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
+import Exception.QuartoIndisponivelException;
 import Model.*;
 
 
@@ -25,7 +27,7 @@ public class HotelController {
 	}
 	
 	//Cria uma nova lista cahamada disponiveis que percorre todos os quartos e se NÂO estiver ocupado adiciona na lista e retorna
-	public List<Quarto> getQuartosDisponiveis(){
+	public List<Quarto> getQuartosDisponiveis() {
 		List<Quarto> disponiveis = new ArrayList<>();
 		for(Quarto q : quartos) {
 			if(!q.isOcupado()) {
@@ -36,17 +38,22 @@ public class HotelController {
 	}
 	
 	//Busca o quarto pelo numero com buscarQuarto, verifica se existe e se esta livre, cria um cliente e uma reserva, marca o quaro como ocupado e adiciona na lista reservas
-	public boolean reservarQuarto(String nome, String cpf, String telefone, int numeroQuarto, LocalDate entrada, LocalDate saida) {
+	public boolean reservarQuarto(String nome, String cpf, String telefone, int numeroQuarto, LocalDate entrada, LocalDate saida, String arquivo) throws QuartoIndisponivelException {
 		Quarto quarto = buscarQuarto(numeroQuarto);
 		if(quarto == null || quarto.isOcupado()) {
-			return false;
+			throw new QuartoIndisponivelException();
 		}
 		
 		Cliente cliente = new Cliente(nome, cpf, telefone);
 		Reserva reserva = new Reserva(cliente, quarto, entrada, saida);
 		quarto.setOcupado(true);
 		reservas.add(reserva);
-		return true;
+		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(arquivo))) {
+			oos.writeObject(cliente);
+			return true;
+		} catch(IOException e) {
+			return false;
+		}
 	}
 	
 	//Procura um quarto com o numero indicado, retorna o objeto se encontrar e null se não encontrar
@@ -60,7 +67,7 @@ public class HotelController {
 	}
 	
 	//Retornar a lista de reservas feitas
-	public List<Reserva> getReservas(){
+	public List<Reserva> getReservas() {
 		return reservas;
 	}
 	

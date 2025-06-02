@@ -3,8 +3,6 @@ package View;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
-import java.io.*;
-import java.util.InputMismatchException;
 
 import Controller.*;
 import Exception.QuartoIndisponivelException;
@@ -78,13 +76,15 @@ public class Menu {
         
         System.out.print("Data de saída (AAAA-MM-DD): ");
         LocalDate saida = LocalDate.parse(scanner.nextLine());
-        
-        boolean sucesso = controller.reservarQuarto(nome, cpf, telefone, numeroQuarto, entrada, saida);
-        if(sucesso) {
-        	System.out.println("Reserva feita com sucesso!");
-        }else {
-        	System.out.println("Não foi possível realizar a reserva (quarto inexistente ou ocupado).");
-        }
+
+		System.out.println("Nome do arquivo a ser salvo(formato: nome.dat): ");
+		String arquivo = scanner.nextLine();
+		
+		try {
+			if(controller.reservarQuarto(nome, cpf, telefone, numeroQuarto, entrada, saida, arquivo));
+		} catch(QuartoIndisponivelException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	private static void listarReservas() {
