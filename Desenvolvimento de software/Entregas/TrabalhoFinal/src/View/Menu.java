@@ -15,6 +15,22 @@ public class Menu {
 	private static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
+		// Inicializa o controller para carregar os dados dos arquivos .dat
+		HotelController hotelController = new HotelController();
+		// Instancia o Menu
+		Menu sistemaMenu = new Menu(hotelController);
+		// Chama o método para exibição do menu
+		sistemaMenu.exibirMenu();
+
+		System.out.println("Sistema Encerrado.");
+	}
+
+	private Menu(HotelController controller) {
+		this.controller = controller;
+		this.scanner = new Scanner(System.in);
+	}
+
+	private static void exibirMenu() {
 		int opcao;
 		
 		 do {
@@ -77,7 +93,7 @@ public class Menu {
         System.out.print("Data de saída (AAAA-MM-DD): ");
         LocalDate saida = LocalDate.parse(scanner.nextLine());
 
-		System.out.println("Nome do arquivo a ser salvo(formato: nome.dat): ");
+		System.out.print("Nome do arquivo a ser salvo: ");
 		String arquivo = scanner.nextLine();
 		
 		try {
@@ -116,4 +132,3 @@ public class Menu {
 		}
 	}
 }
-

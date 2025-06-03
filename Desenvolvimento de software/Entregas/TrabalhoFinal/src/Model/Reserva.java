@@ -1,8 +1,10 @@
 package Model;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Reserva {
+public class Reserva implements Serializable {
+	private static final long serialVersionUID = 1L; // Isso garante que o objeto serializado seja da mesma "versão" que a classe que vai ser comparada na desserialização. Se o valor for diferente, o programa da um erro que impede a desserialização
 	private Cliente cliente;
 	private Quarto quarto;
 	private LocalDate dataEntrada, dataSaida;

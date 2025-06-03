@@ -1,6 +1,8 @@
 package Model;
+import java.io.Serializable;
 
-public class Quarto {
+public class Quarto implements Serializable {
+	private static final long serialVersionUID = 1L; // Isso garante que o objeto serializado seja da mesma "versão" que a classe que vai ser comparada na desserialização. Se o valor for diferente, o programa da um erro que impede a desserialização
 	private int numero;
 	private String tipo;
 	private double precoPorNoite;
